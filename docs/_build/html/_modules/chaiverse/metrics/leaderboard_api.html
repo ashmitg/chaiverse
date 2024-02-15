@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chaiverse.metrics.leaderboard_api &#8212; chaidoc 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for chaiverse.metrics.leaderboard_api</h1><div class="highlight"><pre>
+<span></span><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;get_leaderboard&quot;</span><span class="p">]</span>
+
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">chaiverse.lib</span> <span class="kn">import</span> <span class="n">binomial_tools</span>
+<span class="kn">from</span> <span class="nn">chaiverse.utils</span> <span class="kn">import</span> <span class="n">get_submissions</span><span class="p">,</span> <span class="n">distribute_to_workers</span>
+<span class="kn">from</span> <span class="nn">chaiverse.metrics.feedback_metrics</span> <span class="kn">import</span> <span class="n">FeedbackMetrics</span>
+<span class="kn">from</span> <span class="nn">chaiverse</span> <span class="kn">import</span> <span class="n">constants</span><span class="p">,</span> <span class="n">feedback</span>
+
+
+<div class="viewcode-block" id="get_leaderboard">
+<a class="viewcode-back" href="../../../chaiverse.metrics.html#chaiverse.metrics.leaderboard_api.get_leaderboard">[docs]</a>
+<span class="k">def</span> <span class="nf">get_leaderboard</span><span class="p">(</span>
+        <span class="n">developer_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">max_workers</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_MAX_WORKERS</span><span class="p">,</span>
+        <span class="n">submission_date_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">evaluation_date_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">submission_ids</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fetch_feedback</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="p">):</span>
+    <span class="n">submissions</span> <span class="o">=</span> <span class="n">get_submissions</span><span class="p">(</span><span class="n">developer_key</span><span class="p">,</span> <span class="n">submission_date_range</span><span class="p">)</span>
+    <span class="n">submissions</span> <span class="o">=</span> <span class="n">_filter_submissions_by_submission_ids</span><span class="p">(</span><span class="n">submissions</span><span class="p">,</span> <span class="n">submission_ids</span><span class="p">)</span> <span class="k">if</span> <span class="n">submission_ids</span> <span class="o">!=</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">submissions</span>
+    <span class="n">submissions</span> <span class="o">=</span> <span class="n">_filter_submissions_by_feedback_count</span><span class="p">(</span><span class="n">submissions</span><span class="p">,</span> <span class="n">constants</span><span class="o">.</span><span class="n">PUBLIC_LEADERBOARD_MINIMUM_FEEDBACK_COUNT</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">distribute_to_workers</span><span class="p">(</span>
+        <span class="n">get_leaderboard_row</span><span class="p">,</span>
+        <span class="n">submissions</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span>
+        <span class="n">developer_key</span><span class="o">=</span><span class="n">developer_key</span><span class="p">,</span>
+        <span class="n">evaluation_date_range</span><span class="o">=</span><span class="n">evaluation_date_range</span><span class="p">,</span>
+        <span class="n">max_workers</span><span class="o">=</span><span class="n">max_workers</span><span class="p">,</span>
+        <span class="n">fetch_feedback</span><span class="o">=</span><span class="n">fetch_feedback</span>
+    <span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">_get_filled_leaderboard</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span></div>
+
+
+
+<span class="k">def</span> <span class="nf">get_leaderboard_row</span><span class="p">(</span><span class="n">submission_item</span><span class="p">,</span> <span class="n">developer_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">evaluation_date_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fetch_feedback</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">submission_id</span><span class="p">,</span> <span class="n">submission_data</span> <span class="o">=</span> <span class="n">submission_item</span>
+    <span class="n">submission_feedback_total</span> <span class="o">=</span> <span class="n">submission_data</span><span class="p">[</span><span class="s1">&#39;thumbs_up&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">submission_data</span><span class="p">[</span><span class="s1">&#39;thumbs_down&#39;</span><span class="p">]</span>
+    <span class="n">is_updated</span> <span class="o">=</span> <span class="n">feedback</span><span class="o">.</span><span class="n">is_submission_updated</span><span class="p">(</span><span class="n">submission_id</span><span class="p">,</span> <span class="n">submission_feedback_total</span><span class="p">)</span>
+
+    <span class="n">feedback_metrics</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;thumbs_up_ratio&#39;</span><span class="p">:</span> <span class="n">binomial_tools</span><span class="o">.</span><span class="n">get_ratio</span><span class="p">(</span><span class="n">submission_data</span><span class="p">[</span><span class="s1">&#39;thumbs_up&#39;</span><span class="p">],</span> <span class="n">submission_data</span><span class="p">[</span><span class="s1">&#39;thumbs_down&#39;</span><span class="p">]),</span>
+        <span class="s1">&#39;thumbs_up_ratio_se&#39;</span><span class="p">:</span> <span class="n">binomial_tools</span><span class="o">.</span><span class="n">get_ratio_se</span><span class="p">(</span><span class="n">submission_data</span><span class="p">[</span><span class="s1">&#39;thumbs_up&#39;</span><span class="p">],</span> <span class="n">submission_data</span><span class="p">[</span><span class="s1">&#39;thumbs_down&#39;</span><span class="p">]),</span>
+        <span class="s1">&#39;total_feedback_count&#39;</span><span class="p">:</span> <span class="n">submission_data</span><span class="p">[</span><span class="s1">&#39;thumbs_up&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">submission_data</span><span class="p">[</span><span class="s1">&#39;thumbs_down&#39;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="n">fetch_feedback</span><span class="p">:</span>
+        <span class="n">feedback_metrics</span> <span class="o">=</span> <span class="n">get_submission_metrics</span><span class="p">(</span>
+            <span class="n">submission_id</span><span class="p">,</span> 
+            <span class="n">developer_key</span><span class="p">,</span> 
+            <span class="n">reload</span><span class="o">=</span><span class="n">is_updated</span><span class="p">,</span> 
+            <span class="n">evaluation_date_range</span><span class="o">=</span><span class="n">evaluation_date_range</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;submission_id&#39;</span><span class="p">:</span> <span class="n">submission_id</span><span class="p">,</span> <span class="o">**</span><span class="n">submission_data</span><span class="p">,</span> <span class="o">**</span><span class="n">feedback_metrics</span><span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">_get_filled_leaderboard</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="c1"># maintain backwards compatibility with model_name field</span>
+    <span class="n">_fill_default_value</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;model_name&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;submission_id&#39;</span><span class="p">])</span>
+    <span class="n">_fill_default_value</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;is_custom_reward&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">_get_filled_columns</span><span class="p">():</span>
+        <span class="n">_fill_default_value</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+
+
+<span class="k">def</span> <span class="nf">_get_filled_columns</span><span class="p">():</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">competition_type</span> <span class="ow">in</span> <span class="n">constants</span><span class="o">.</span><span class="n">COMPETITION_TYPE_CONFIGURATION</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">new_columns</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">COMPETITION_TYPE_CONFIGURATION</span><span class="p">[</span><span class="n">competition_type</span><span class="p">][</span><span class="s1">&#39;output_columns&#39;</span><span class="p">]</span>
+        <span class="n">columns</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_columns</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">columns</span>
+
+
+<span class="k">def</span> <span class="nf">_fill_default_value</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">default_value</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">field</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="n">default_value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">field</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">default_value</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_filter_submissions_by_submission_ids</span><span class="p">(</span><span class="n">submissions</span><span class="p">,</span> <span class="n">submission_ids</span><span class="p">):</span>
+    <span class="n">filtered_submissions</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">submission_id</span><span class="p">:</span> <span class="n">data</span>
+        <span class="k">for</span> <span class="n">submission_id</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">submissions</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">submission_id</span> <span class="ow">in</span> <span class="n">submission_ids</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">filtered_submissions</span>
+
+
+<span class="k">def</span> <span class="nf">_filter_submissions_by_feedback_count</span><span class="p">(</span><span class="n">submissions</span><span class="p">,</span> <span class="n">min_feedback_count</span><span class="p">):</span>
+    <span class="n">submissions</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">submission_id</span><span class="p">:</span> <span class="n">submission_data</span> <span class="k">for</span> <span class="n">submission_id</span><span class="p">,</span> <span class="n">submission_data</span> <span class="ow">in</span> <span class="n">submissions</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">submission_data</span><span class="p">[</span><span class="s1">&#39;thumbs_up&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">submission_data</span><span class="p">[</span><span class="s1">&#39;thumbs_down&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">min_feedback_count</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">submissions</span>
+
+
+<span class="k">def</span> <span class="nf">get_submission_metrics</span><span class="p">(</span><span class="n">submission_id</span><span class="p">,</span> <span class="n">developer_key</span><span class="p">,</span> <span class="n">reload</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">evaluation_date_range</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">feedback_data</span> <span class="o">=</span> <span class="n">feedback</span><span class="o">.</span><span class="n">get_feedback</span><span class="p">(</span><span class="n">submission_id</span><span class="p">,</span> <span class="n">developer_key</span><span class="p">,</span> <span class="n">reload</span><span class="o">=</span><span class="n">reload</span><span class="p">)</span>
+    <span class="n">feedback_metrics</span> <span class="o">=</span> <span class="n">FeedbackMetrics</span><span class="p">(</span><span class="n">feedback_data</span><span class="o">.</span><span class="n">raw_data</span><span class="p">)</span>
+    <span class="n">feedback_metrics</span><span class="o">.</span><span class="n">filter_for_date_range</span><span class="p">(</span><span class="n">evaluation_date_range</span><span class="p">)</span>
+    <span class="n">feedback_metrics</span><span class="o">.</span><span class="n">filter_duplicated_uid</span><span class="p">()</span>
+    <span class="n">metrics</span> <span class="o">=</span> <span class="n">feedback_metrics</span><span class="o">.</span><span class="n">calc_metrics</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">metrics</span>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">chaidoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">chaiverse</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, chai.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

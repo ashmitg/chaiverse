@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>chaiverse.metrics package &#8212; chaidoc 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="chaiverse.lib package" href="chaiverse.lib.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="chaiverse-metrics-package">
+<h1>chaiverse.metrics package<a class="headerlink" href="#chaiverse-metrics-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-chaiverse.metrics.conversation_metrics">
+<span id="chaiverse-metrics-conversation-metrics-module"></span><h2>chaiverse.metrics.conversation_metrics module<a class="headerlink" href="#module-chaiverse.metrics.conversation_metrics" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chaiverse.metrics.conversation_metrics.ConversationMetrics">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chaiverse.metrics.conversation_metrics.</span></span><span class="sig-name descname"><span class="pre">ConversationMetrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/metrics/conversation_metrics.html#ConversationMetrics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.metrics.conversation_metrics.ConversationMetrics" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="chaiverse.metrics.conversation_metrics.ConversationMetrics.mcl">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mcl</span></span><a class="headerlink" href="#chaiverse.metrics.conversation_metrics.ConversationMetrics.mcl" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="chaiverse.metrics.conversation_metrics.ConversationMetrics.repetition_score">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">repetition_score</span></span><a class="headerlink" href="#chaiverse.metrics.conversation_metrics.ConversationMetrics.repetition_score" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-chaiverse.metrics.feedback_metrics">
+<span id="chaiverse-metrics-feedback-metrics-module"></span><h2>chaiverse.metrics.feedback_metrics module<a class="headerlink" href="#module-chaiverse.metrics.feedback_metrics" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chaiverse.metrics.feedback_metrics.FeedbackMetrics">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chaiverse.metrics.feedback_metrics.</span></span><span class="sig-name descname"><span class="pre">FeedbackMetrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feedback_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/metrics/feedback_metrics.html#FeedbackMetrics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.metrics.feedback_metrics.FeedbackMetrics.calc_metrics">
+<span class="sig-name descname"><span class="pre">calc_metrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/metrics/feedback_metrics.html#FeedbackMetrics.calc_metrics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.calc_metrics" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="chaiverse.metrics.feedback_metrics.FeedbackMetrics.convo_metrics">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convo_metrics</span></span><a class="headerlink" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.convo_metrics" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.metrics.feedback_metrics.FeedbackMetrics.filter_duplicated_uid">
+<span class="sig-name descname"><span class="pre">filter_duplicated_uid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/metrics/feedback_metrics.html#FeedbackMetrics.filter_duplicated_uid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.filter_duplicated_uid" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.metrics.feedback_metrics.FeedbackMetrics.filter_for_date_range">
+<span class="sig-name descname"><span class="pre">filter_for_date_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evaluation_date_range</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/metrics/feedback_metrics.html#FeedbackMetrics.filter_for_date_range"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.filter_for_date_range" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="chaiverse.metrics.feedback_metrics.FeedbackMetrics.mcl">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mcl</span></span><a class="headerlink" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.mcl" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="chaiverse.metrics.feedback_metrics.FeedbackMetrics.repetition_score">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">repetition_score</span></span><a class="headerlink" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.repetition_score" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="chaiverse.metrics.feedback_metrics.FeedbackMetrics.thumbs_up_ratio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">thumbs_up_ratio</span></span><a class="headerlink" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.thumbs_up_ratio" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="chaiverse.metrics.feedback_metrics.FeedbackMetrics.thumbs_up_ratio_se">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">thumbs_up_ratio_se</span></span><a class="headerlink" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.thumbs_up_ratio_se" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="chaiverse.metrics.feedback_metrics.FeedbackMetrics.total_feedback_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">total_feedback_count</span></span><a class="headerlink" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.total_feedback_count" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-chaiverse.metrics.leaderboard_api">
+<span id="chaiverse-metrics-leaderboard-api-module"></span><h2>chaiverse.metrics.leaderboard_api module<a class="headerlink" href="#module-chaiverse.metrics.leaderboard_api" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.metrics.leaderboard_api.get_leaderboard">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.metrics.leaderboard_api.</span></span><span class="sig-name descname"><span class="pre">get_leaderboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_workers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submission_date_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evaluation_date_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submission_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fetch_feedback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/metrics/leaderboard_api.html#get_leaderboard"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.metrics.leaderboard_api.get_leaderboard" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-chaiverse.metrics.leaderboard_cli">
+<span id="chaiverse-metrics-leaderboard-cli-module"></span><h2>chaiverse.metrics.leaderboard_cli module<a class="headerlink" href="#module-chaiverse.metrics.leaderboard_cli" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.metrics.leaderboard_cli.display_competition_leaderboard">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.metrics.leaderboard_cli.</span></span><span class="sig-name descname"><span class="pre">display_competition_leaderboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">competition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detailed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regenerate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_workers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/metrics/leaderboard_cli.html#display_competition_leaderboard"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.metrics.leaderboard_cli.display_competition_leaderboard" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.metrics.leaderboard_cli.display_leaderboard">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.metrics.leaderboard_cli.</span></span><span class="sig-name descname"><span class="pre">display_leaderboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regenerate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detailed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_workers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/metrics/leaderboard_cli.html#display_leaderboard"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.metrics.leaderboard_cli.display_leaderboard" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-chaiverse.metrics.leaderboard_formatter">
+<span id="chaiverse-metrics-leaderboard-formatter-module"></span><h2>chaiverse.metrics.leaderboard_formatter module<a class="headerlink" href="#module-chaiverse.metrics.leaderboard_formatter" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.metrics.leaderboard_formatter.format_leaderboard">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.metrics.leaderboard_formatter.</span></span><span class="sig-name descname"><span class="pre">format_leaderboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detailed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">competition_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/metrics/leaderboard_formatter.html#format_leaderboard"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.metrics.leaderboard_formatter.format_leaderboard" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-chaiverse.metrics">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-chaiverse.metrics" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">chaidoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">chaiverse</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="chaiverse.html">chaiverse package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="chaiverse.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.lib.html">chaiverse.lib package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">chaiverse.metrics package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#module-chaiverse.metrics.conversation_metrics">chaiverse.metrics.conversation_metrics module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#chaiverse.metrics.conversation_metrics.ConversationMetrics"><code class="docutils literal notranslate"><span class="pre">ConversationMetrics</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#chaiverse.metrics.conversation_metrics.ConversationMetrics.mcl"><code class="docutils literal notranslate"><span class="pre">ConversationMetrics.mcl</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="#chaiverse.metrics.conversation_metrics.ConversationMetrics.repetition_score"><code class="docutils literal notranslate"><span class="pre">ConversationMetrics.repetition_score</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#module-chaiverse.metrics.feedback_metrics">chaiverse.metrics.feedback_metrics module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.calc_metrics"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.calc_metrics()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.convo_metrics"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.convo_metrics</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.filter_duplicated_uid"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.filter_duplicated_uid()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.filter_for_date_range"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.filter_for_date_range()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.mcl"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.mcl</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.repetition_score"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.repetition_score</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.thumbs_up_ratio"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.thumbs_up_ratio</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.thumbs_up_ratio_se"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.thumbs_up_ratio_se</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="#chaiverse.metrics.feedback_metrics.FeedbackMetrics.total_feedback_count"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.total_feedback_count</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#module-chaiverse.metrics.leaderboard_api">chaiverse.metrics.leaderboard_api module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#chaiverse.metrics.leaderboard_api.get_leaderboard"><code class="docutils literal notranslate"><span class="pre">get_leaderboard()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#module-chaiverse.metrics.leaderboard_cli">chaiverse.metrics.leaderboard_cli module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#chaiverse.metrics.leaderboard_cli.display_competition_leaderboard"><code class="docutils literal notranslate"><span class="pre">display_competition_leaderboard()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#chaiverse.metrics.leaderboard_cli.display_leaderboard"><code class="docutils literal notranslate"><span class="pre">display_leaderboard()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#module-chaiverse.metrics.leaderboard_formatter">chaiverse.metrics.leaderboard_formatter module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#chaiverse.metrics.leaderboard_formatter.format_leaderboard"><code class="docutils literal notranslate"><span class="pre">format_leaderboard()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#module-chaiverse.metrics">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse.chat">chaiverse.chat module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse.competition">chaiverse.competition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse.config">chaiverse.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse.constants">chaiverse.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse.feedback">chaiverse.feedback module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse.formatters">chaiverse.formatters module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse.http_client">chaiverse.http_client module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse.login_cli">chaiverse.login_cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse.setup">chaiverse.setup module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse.submit">chaiverse.submit module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse.utils">chaiverse.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.html#module-chaiverse">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">chaiverse</a><ul>
+  <li><a href="chaiverse.html">chaiverse package</a><ul>
+      <li>Previous: <a href="chaiverse.lib.html" title="previous chapter">chaiverse.lib package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, chai.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/chaiverse.metrics.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

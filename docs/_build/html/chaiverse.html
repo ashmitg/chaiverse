@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>chaiverse package &#8212; chaidoc 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="chaiverse.lib package" href="chaiverse.lib.html" />
+    <link rel="prev" title="chaiverse" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="chaiverse-package">
+<h1>chaiverse package<a class="headerlink" href="#chaiverse-package" title="Link to this heading">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chaiverse.lib.html">chaiverse.lib package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chaiverse.lib.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chaiverse.lib.html#module-chaiverse.lib.binomial_tools">chaiverse.lib.binomial_tools module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.lib.html#chaiverse.lib.binomial_tools.get_ratio"><code class="docutils literal notranslate"><span class="pre">get_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.lib.html#chaiverse.lib.binomial_tools.get_ratio_se"><code class="docutils literal notranslate"><span class="pre">get_ratio_se()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chaiverse.lib.html#module-chaiverse.lib.date_tools">chaiverse.lib.date_tools module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.lib.html#chaiverse.lib.date_tools.convert_to_utc_iso_format"><code class="docutils literal notranslate"><span class="pre">convert_to_utc_iso_format()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.lib.html#chaiverse.lib.date_tools.is_epoch_time_in_date_range"><code class="docutils literal notranslate"><span class="pre">is_epoch_time_in_date_range()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.lib.html#chaiverse.lib.date_tools.us_pacific_string"><code class="docutils literal notranslate"><span class="pre">us_pacific_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.lib.html#chaiverse.lib.date_tools.utc_string"><code class="docutils literal notranslate"><span class="pre">utc_string()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chaiverse.lib.html#module-chaiverse.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chaiverse.metrics.html">chaiverse.metrics package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chaiverse.metrics.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chaiverse.metrics.html#module-chaiverse.metrics.conversation_metrics">chaiverse.metrics.conversation_metrics module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.conversation_metrics.ConversationMetrics"><code class="docutils literal notranslate"><span class="pre">ConversationMetrics</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.conversation_metrics.ConversationMetrics.mcl"><code class="docutils literal notranslate"><span class="pre">ConversationMetrics.mcl</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.conversation_metrics.ConversationMetrics.repetition_score"><code class="docutils literal notranslate"><span class="pre">ConversationMetrics.repetition_score</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chaiverse.metrics.html#module-chaiverse.metrics.feedback_metrics">chaiverse.metrics.feedback_metrics module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.feedback_metrics.FeedbackMetrics"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.feedback_metrics.FeedbackMetrics.calc_metrics"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.calc_metrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.feedback_metrics.FeedbackMetrics.convo_metrics"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.convo_metrics</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.feedback_metrics.FeedbackMetrics.filter_duplicated_uid"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.filter_duplicated_uid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.feedback_metrics.FeedbackMetrics.filter_for_date_range"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.filter_for_date_range()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.feedback_metrics.FeedbackMetrics.mcl"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.mcl</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.feedback_metrics.FeedbackMetrics.repetition_score"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.repetition_score</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.feedback_metrics.FeedbackMetrics.thumbs_up_ratio"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.thumbs_up_ratio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.feedback_metrics.FeedbackMetrics.thumbs_up_ratio_se"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.thumbs_up_ratio_se</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.feedback_metrics.FeedbackMetrics.total_feedback_count"><code class="docutils literal notranslate"><span class="pre">FeedbackMetrics.total_feedback_count</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chaiverse.metrics.html#module-chaiverse.metrics.leaderboard_api">chaiverse.metrics.leaderboard_api module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.leaderboard_api.get_leaderboard"><code class="docutils literal notranslate"><span class="pre">get_leaderboard()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chaiverse.metrics.html#module-chaiverse.metrics.leaderboard_cli">chaiverse.metrics.leaderboard_cli module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.leaderboard_cli.display_competition_leaderboard"><code class="docutils literal notranslate"><span class="pre">display_competition_leaderboard()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.leaderboard_cli.display_leaderboard"><code class="docutils literal notranslate"><span class="pre">display_leaderboard()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chaiverse.metrics.html#module-chaiverse.metrics.leaderboard_formatter">chaiverse.metrics.leaderboard_formatter module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chaiverse.metrics.html#chaiverse.metrics.leaderboard_formatter.format_leaderboard"><code class="docutils literal notranslate"><span class="pre">format_leaderboard()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chaiverse.metrics.html#module-chaiverse.metrics">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-chaiverse.chat">
+<span id="chaiverse-chat-module"></span><h2>chaiverse.chat module<a class="headerlink" href="#module-chaiverse.chat" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chaiverse.chat.Bot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chaiverse.chat.</span></span><span class="sig-name descname"><span class="pre">Bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">developer_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endpoint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/models/{submission_id}/chat'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#Bot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.chat.Bot" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.chat.Bot.get_response">
+<span class="sig-name descname"><span class="pre">get_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_input</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#Bot.get_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.chat.Bot.get_response" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="chaiverse.chat.BotConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chaiverse.chat.</span></span><span class="sig-name descname"><span class="pre">BotConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot_label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#BotConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.chat.BotConfig" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.chat.BotConfig.bot_label">
+<span class="sig-name descname"><span class="pre">bot_label</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.chat.BotConfig.bot_label" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.chat.BotConfig.first_message">
+<span class="sig-name descname"><span class="pre">first_message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.chat.BotConfig.first_message" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.chat.BotConfig.from_json">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#BotConfig.from_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.chat.BotConfig.from_json" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.chat.BotConfig.memory">
+<span class="sig-name descname"><span class="pre">memory</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.chat.BotConfig.memory" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.chat.BotConfig.prompt">
+<span class="sig-name descname"><span class="pre">prompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.chat.BotConfig.prompt" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="chaiverse.chat.SubmissionChatbot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chaiverse.chat.</span></span><span class="sig-name descname"><span class="pre">SubmissionChatbot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#SubmissionChatbot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.chat.SubmissionChatbot" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Chat with a model that has been submitted and deployed to Chaiverse</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.chat.SubmissionChatbot.submission_id">
+<span class="sig-name descname"><span class="pre">submission_id</span></span><a class="headerlink" href="#chaiverse.chat.SubmissionChatbot.submission_id" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.chat.SubmissionChatbot.developer_key">
+<span class="sig-name descname"><span class="pre">developer_key</span></span><a class="headerlink" href="#chaiverse.chat.SubmissionChatbot.developer_key" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.chat.SubmissionChatbot.chat">
+<span class="sig-name descname"><span class="pre">chat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bot_config_file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_model_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#SubmissionChatbot.chat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.chat.SubmissionChatbot.chat" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Launch</span> <span class="pre">a</span> <span class="pre">chat</span> <span class="pre">session</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">bot</span> <span class="pre">profile</span> <span class="pre">specified</span> <span class="pre">in</span> <span class="pre">bot_config_file_name</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.chat.SubmissionChatbot.show_available_bots">
+<span class="sig-name descname"><span class="pre">show_available_bots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#SubmissionChatbot.show_available_bots"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.chat.SubmissionChatbot.show_available_bots" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Displays</span> <span class="pre">the</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">bots</span> <span class="pre">that</span> <span class="pre">are</span> <span class="pre">available</span> <span class="pre">for</span> <span class="pre">chat</span> <span class="pre">that</span> <span class="pre">can</span> <span class="pre">be</span> <span class="pre">passed</span> <span class="pre">into</span> <span class="pre">chat()</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Example</span> <span class="pre">usage:</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">--------------</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">chatbot</span> <span class="pre">=</span> <span class="pre">ChatWithSubmission(submission_id)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.chat.SubmissionChatbot.chatbot.chat">
+<span class="sig-prename descclassname"><span class="pre">chatbot.</span></span><span class="sig-name descname"><span class="pre">chat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">'vampire_queen'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chaiverse.chat.SubmissionChatbot.chatbot.chat" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">chat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bot_config_file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_model_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#SubmissionChatbot.chat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Link to this definition">¶</a></dt>
+<dd><p>Launch a chat session with the bot profile specified in bot_config_file_name</p>
+<p>bot_config_file_name: str - name of the bot profile to chat with
+show_model_input: bool - whether to display the raw model input to your language model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">show_available_bots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#SubmissionChatbot.show_available_bots"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id1" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.chat.get_available_bots">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.chat.</span></span><span class="sig-name descname"><span class="pre">get_available_bots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#get_available_bots"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.chat.get_available_bots" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.chat.get_bot_config">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.chat.</span></span><span class="sig-name descname"><span class="pre">get_bot_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bot_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#get_bot_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.chat.get_bot_config" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.chat.get_bot_names">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.chat.</span></span><span class="sig-name descname"><span class="pre">get_bot_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#get_bot_names"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.chat.get_bot_names" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.chat.get_bot_response">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.chat.</span></span><span class="sig-name descname"><span class="pre">get_bot_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submission_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">developer_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/chat.html#get_bot_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.chat.get_bot_response" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-chaiverse.competition">
+<span id="chaiverse-competition-module"></span><h2>chaiverse.competition module<a class="headerlink" href="#module-chaiverse.competition" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.competition.get_competitions">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.competition.</span></span><span class="sig-name descname"><span class="pre">get_competitions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/competition.html#get_competitions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.competition.get_competitions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-chaiverse.config">
+<span id="chaiverse-config-module"></span><h2>chaiverse.config module<a class="headerlink" href="#module-chaiverse.config" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-chaiverse.constants">
+<span id="chaiverse-constants-module"></span><h2>chaiverse.constants module<a class="headerlink" href="#module-chaiverse.constants" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-chaiverse.feedback">
+<span id="chaiverse-feedback-module"></span><h2>chaiverse.feedback module<a class="headerlink" href="#module-chaiverse.feedback" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chaiverse.feedback.Feedback">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chaiverse.feedback.</span></span><span class="sig-name descname"><span class="pre">Feedback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/feedback.html#Feedback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.feedback.Feedback" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="chaiverse.feedback.Feedback.df">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">df</span></span><a class="headerlink" href="#chaiverse.feedback.Feedback.df" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.feedback.Feedback.pprint_row">
+<span class="sig-name descname"><span class="pre">pprint_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/feedback.html#Feedback.pprint_row"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.feedback.Feedback.pprint_row" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.feedback.Feedback.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/feedback.html#Feedback.sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.feedback.Feedback.sample" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.feedback.get_feedback">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.feedback.</span></span><span class="sig-name descname"><span class="pre">get_feedback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reload</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/feedback.html#get_feedback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.feedback.get_feedback" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.feedback.is_submission_updated">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.feedback.</span></span><span class="sig-name descname"><span class="pre">is_submission_updated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submission_feedback_total</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/chaiverse/feedback.html#is_submission_updated"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.feedback.is_submission_updated" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-chaiverse.formatters">
+<span id="chaiverse-formatters-module"></span><h2>chaiverse.formatters module<a class="headerlink" href="#module-chaiverse.formatters" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chaiverse.formatters.ChatMLFormatter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chaiverse.formatters.</span></span><span class="sig-name descname"><span class="pre">ChatMLFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;|im_start|&gt;system\n{memory}&lt;|im_end|&gt;\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;|im_start|&gt;user\n{prompt}&lt;|im_end|&gt;\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;|im_start|&gt;assistant\n{bot_name}:</span> <span class="pre">{message}&lt;|im_end|&gt;\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;|im_start|&gt;user\n{user_name}:</span> <span class="pre">{message}&lt;|im_end|&gt;\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;|im_start|&gt;assistant\n{bot_name}:'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/formatters.html#ChatMLFormatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.formatters.ChatMLFormatter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#chaiverse.formatters.PromptFormatter" title="chaiverse.formatters.PromptFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PromptFormatter</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.ChatMLFormatter.bot_template">
+<span class="sig-name descname"><span class="pre">bot_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.ChatMLFormatter.bot_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.ChatMLFormatter.memory_template">
+<span class="sig-name descname"><span class="pre">memory_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.ChatMLFormatter.memory_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.ChatMLFormatter.prompt_template">
+<span class="sig-name descname"><span class="pre">prompt_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.ChatMLFormatter.prompt_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.ChatMLFormatter.response_template">
+<span class="sig-name descname"><span class="pre">response_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.ChatMLFormatter.response_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.ChatMLFormatter.user_template">
+<span class="sig-name descname"><span class="pre">user_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.ChatMLFormatter.user_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="chaiverse.formatters.PromptFormatter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chaiverse.formatters.</span></span><span class="sig-name descname"><span class="pre">PromptFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/formatters.html#PromptFormatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.formatters.PromptFormatter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.PromptFormatter.bot_template">
+<span class="sig-name descname"><span class="pre">bot_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.PromptFormatter.bot_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.PromptFormatter.memory_template">
+<span class="sig-name descname"><span class="pre">memory_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.PromptFormatter.memory_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.PromptFormatter.prompt_template">
+<span class="sig-name descname"><span class="pre">prompt_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.PromptFormatter.prompt_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.PromptFormatter.response_template">
+<span class="sig-name descname"><span class="pre">response_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.PromptFormatter.response_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.PromptFormatter.user_template">
+<span class="sig-name descname"><span class="pre">user_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.PromptFormatter.user_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.formatters.PromptFormatter.validate_bot">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_bot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bot_template</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/formatters.html#PromptFormatter.validate_bot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.formatters.PromptFormatter.validate_bot" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.formatters.PromptFormatter.validate_formatter">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt_template</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/formatters.html#PromptFormatter.validate_formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.formatters.PromptFormatter.validate_formatter" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.formatters.PromptFormatter.validate_memory">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_memory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">memory_template</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/formatters.html#PromptFormatter.validate_memory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.formatters.PromptFormatter.validate_memory" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.formatters.PromptFormatter.validate_user">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_template</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/formatters.html#PromptFormatter.validate_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.formatters.PromptFormatter.validate_user" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="chaiverse.formatters.PygmalionFormatter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chaiverse.formatters.</span></span><span class="sig-name descname"><span class="pre">PygmalionFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">&quot;{bot_name}'s</span> <span class="pre">Persona:</span> <span class="pre">{memory}\n####\n&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'{prompt}\n&lt;START&gt;\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'{bot_name}:</span> <span class="pre">{message}\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'{user_name}:</span> <span class="pre">{message}\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'{bot_name}:'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/formatters.html#PygmalionFormatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.formatters.PygmalionFormatter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#chaiverse.formatters.PromptFormatter" title="chaiverse.formatters.PromptFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PromptFormatter</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.PygmalionFormatter.bot_template">
+<span class="sig-name descname"><span class="pre">bot_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.PygmalionFormatter.bot_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.PygmalionFormatter.memory_template">
+<span class="sig-name descname"><span class="pre">memory_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.PygmalionFormatter.memory_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.PygmalionFormatter.prompt_template">
+<span class="sig-name descname"><span class="pre">prompt_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.PygmalionFormatter.prompt_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.PygmalionFormatter.response_template">
+<span class="sig-name descname"><span class="pre">response_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.PygmalionFormatter.response_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.PygmalionFormatter.user_template">
+<span class="sig-name descname"><span class="pre">user_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.PygmalionFormatter.user_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="chaiverse.formatters.VicunaFormatter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chaiverse.formatters.</span></span><span class="sig-name descname"><span class="pre">VicunaFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'###</span> <span class="pre">Instruction:\n{memory}\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'###</span> <span class="pre">Input:\n{prompt}\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'{bot_name}:</span> <span class="pre">{message}\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'{user_name}:</span> <span class="pre">{message}\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'###</span> <span class="pre">Response:\n{bot_name}:'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/formatters.html#VicunaFormatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.formatters.VicunaFormatter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#chaiverse.formatters.PromptFormatter" title="chaiverse.formatters.PromptFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PromptFormatter</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.VicunaFormatter.bot_template">
+<span class="sig-name descname"><span class="pre">bot_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.VicunaFormatter.bot_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.VicunaFormatter.memory_template">
+<span class="sig-name descname"><span class="pre">memory_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.VicunaFormatter.memory_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.VicunaFormatter.prompt_template">
+<span class="sig-name descname"><span class="pre">prompt_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.VicunaFormatter.prompt_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.VicunaFormatter.response_template">
+<span class="sig-name descname"><span class="pre">response_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.VicunaFormatter.response_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.formatters.VicunaFormatter.user_template">
+<span class="sig-name descname"><span class="pre">user_template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#chaiverse.formatters.VicunaFormatter.user_template" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-chaiverse.http_client">
+<span id="chaiverse-http-client-module"></span><h2>chaiverse.http_client module<a class="headerlink" href="#module-chaiverse.http_client" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.http_client.FeedbackClient">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.http_client.</span></span><span class="sig-name descname"><span class="pre">FeedbackClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://guanaco-feedback.chai-research.com'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/http_client.html#FeedbackClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.http_client.FeedbackClient" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.http_client.SubmitterClient">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.http_client.</span></span><span class="sig-name descname"><span class="pre">SubmitterClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://guanaco-submitter.chai-research.com'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/http_client.html#SubmitterClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.http_client.SubmitterClient" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-chaiverse.login_cli">
+<span id="chaiverse-login-cli-module"></span><h2>chaiverse.login_cli module<a class="headerlink" href="#module-chaiverse.login_cli" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.login_cli.auto_authenticate">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.login_cli.</span></span><span class="sig-name descname"><span class="pre">auto_authenticate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/login_cli.html#auto_authenticate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.login_cli.auto_authenticate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.login_cli.developer_login">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.login_cli.</span></span><span class="sig-name descname"><span class="pre">developer_login</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/login_cli.html#developer_login"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.login_cli.developer_login" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-chaiverse.setup">
+<span id="chaiverse-setup-module"></span><h2>chaiverse.setup module<a class="headerlink" href="#module-chaiverse.setup" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-chaiverse.submit">
+<span id="chaiverse-submit-module"></span><h2>chaiverse.submit module<a class="headerlink" href="#module-chaiverse.submit" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chaiverse.submit.ModelSubmitter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chaiverse.submit.</span></span><span class="sig-name descname"><span class="pre">ModelSubmitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/submit.html#ModelSubmitter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.submit.ModelSubmitter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Submits a model to the Guanaco service and exposes it to beta-testers on the Chai app.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.submit.ModelSubmitter.developer_key">
+<span class="sig-name descname"><span class="pre">developer_key</span></span><a class="headerlink" href="#chaiverse.submit.ModelSubmitter.developer_key" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="chaiverse.submit.ModelSubmitter.verbose">
+<span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#chaiverse.submit.ModelSubmitter.verbose" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str - Print deployment logs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.submit.ModelSubmitter.submit">
+<span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/submit.html#ModelSubmitter.submit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.submit.ModelSubmitter.submit" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Submits</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">Guanaco</span> <span class="pre">service.</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Example</span> <span class="pre">usage:</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">--------------</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">submitter</span> <span class="pre">=</span> <span class="pre">ModelSubmitter(developer_key)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chaiverse.submit.ModelSubmitter.submitter.submit">
+<span class="sig-prename descclassname"><span class="pre">submitter.</span></span><span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chaiverse.submit.ModelSubmitter.submitter.submit" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/submit.html#ModelSubmitter.submit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id2" title="Link to this definition">¶</a></dt>
+<dd><p>Submits the model to the Guanaco service and wait for the deployment to finish.</p>
+<dl>
+<dt>submission_params: dict</dt><dd><p>model_repo: str - HuggingFace repo
+generation_params: dict</p>
+<blockquote>
+<div><p>temperature: float
+top_p: float
+top_k: int
+repetition_penalty: float</p>
+</div></blockquote>
+<p>formatter (optional): PromptFormatter
+model_name (optional): str - custom alias for your model</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.submit.check_user_accepts_eula">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.submit.</span></span><span class="sig-name descname"><span class="pre">check_user_accepts_eula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">developer_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/submit.html#check_user_accepts_eula"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.submit.check_user_accepts_eula" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.submit.deactivate_model">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.submit.</span></span><span class="sig-name descname"><span class="pre">deactivate_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/submit.html#deactivate_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.submit.deactivate_model" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.submit.evaluate_model">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.submit.</span></span><span class="sig-name descname"><span class="pre">evaluate_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/submit.html#evaluate_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.submit.evaluate_model" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.submit.get_model_info">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.submit.</span></span><span class="sig-name descname"><span class="pre">get_model_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/submit.html#get_model_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.submit.get_model_info" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.submit.get_my_submissions">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.submit.</span></span><span class="sig-name descname"><span class="pre">get_my_submissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/submit.html#get_my_submissions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.submit.get_my_submissions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.submit.redeploy_model">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.submit.</span></span><span class="sig-name descname"><span class="pre">redeploy_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/submit.html#redeploy_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.submit.redeploy_model" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.submit.submit_model">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.submit.</span></span><span class="sig-name descname"><span class="pre">submit_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_submission</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/submit.html#submit_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.submit.submit_model" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.submit.teardown_model">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.submit.</span></span><span class="sig-name descname"><span class="pre">teardown_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/submit.html#teardown_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.submit.teardown_model" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-chaiverse.utils">
+<span id="chaiverse-utils-module"></span><h2>chaiverse.utils module<a class="headerlink" href="#module-chaiverse.utils" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.utils.cache">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.utils.</span></span><span class="sig-name descname"><span class="pre">cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regenerate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/utils.html#cache"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.utils.cache" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.utils.distribute_to_workers">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.utils.</span></span><span class="sig-name descname"><span class="pre">distribute_to_workers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args_iter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_workers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">worker_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'process'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'thread'</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'process'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/utils.html#distribute_to_workers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.utils.distribute_to_workers" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.utils.get_all_historical_submissions">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.utils.</span></span><span class="sig-name descname"><span class="pre">get_all_historical_submissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">developer_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/utils.html#get_all_historical_submissions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.utils.get_all_historical_submissions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.utils.get_guanaco_data_dir_env">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.utils.</span></span><span class="sig-name descname"><span class="pre">get_guanaco_data_dir_env</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/utils.html#get_guanaco_data_dir_env"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.utils.get_guanaco_data_dir_env" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.utils.get_hexdigest">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.utils.</span></span><span class="sig-name descname"><span class="pre">get_hexdigest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_string</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/utils.html#get_hexdigest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.utils.get_hexdigest" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.utils.get_localised_timestamp">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.utils.</span></span><span class="sig-name descname"><span class="pre">get_localised_timestamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timezone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/utils.html#get_localised_timestamp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.utils.get_localised_timestamp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.utils.get_submissions">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.utils.</span></span><span class="sig-name descname"><span class="pre">get_submissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">developer_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/utils.html#get_submissions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.utils.get_submissions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.utils.get_url">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.utils.</span></span><span class="sig-name descname"><span class="pre">get_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://guanaco-submitter.chai-research.com'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwarg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/utils.html#get_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.utils.get_url" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.utils.guanaco_data_dir">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.utils.</span></span><span class="sig-name descname"><span class="pre">guanaco_data_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/utils.html#guanaco_data_dir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.utils.guanaco_data_dir" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.utils.parse_log_entry">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.utils.</span></span><span class="sig-name descname"><span class="pre">parse_log_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timezone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/utils.html#parse_log_entry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.utils.parse_log_entry" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chaiverse.utils.print_color">
+<span class="sig-prename descclassname"><span class="pre">chaiverse.utils.</span></span><span class="sig-name descname"><span class="pre">print_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chaiverse/utils.html#print_color"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chaiverse.utils.print_color" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-chaiverse">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-chaiverse" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">chaidoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">chaiverse</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">chaiverse package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.lib.html">chaiverse.lib package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chaiverse.metrics.html">chaiverse.metrics package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse.chat">chaiverse.chat module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.chat.Bot"><code class="docutils literal notranslate"><span class="pre">Bot</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.chat.Bot.get_response"><code class="docutils literal notranslate"><span class="pre">Bot.get_response()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.chat.BotConfig"><code class="docutils literal notranslate"><span class="pre">BotConfig</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.chat.BotConfig.bot_label"><code class="docutils literal notranslate"><span class="pre">BotConfig.bot_label</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.chat.BotConfig.first_message"><code class="docutils literal notranslate"><span class="pre">BotConfig.first_message</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.chat.BotConfig.from_json"><code class="docutils literal notranslate"><span class="pre">BotConfig.from_json()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.chat.BotConfig.memory"><code class="docutils literal notranslate"><span class="pre">BotConfig.memory</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.chat.BotConfig.prompt"><code class="docutils literal notranslate"><span class="pre">BotConfig.prompt</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.chat.SubmissionChatbot"><code class="docutils literal notranslate"><span class="pre">SubmissionChatbot</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.chat.SubmissionChatbot.submission_id"><code class="docutils literal notranslate"><span class="pre">SubmissionChatbot.submission_id</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.chat.SubmissionChatbot.developer_key"><code class="docutils literal notranslate"><span class="pre">SubmissionChatbot.developer_key</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.chat.SubmissionChatbot.chat"><code class="docutils literal notranslate"><span class="pre">SubmissionChatbot.chat()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.chat.SubmissionChatbot.show_available_bots"><code class="docutils literal notranslate"><span class="pre">SubmissionChatbot.show_available_bots()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">SubmissionChatbot.chat()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">SubmissionChatbot.show_available_bots()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.chat.SubmissionChatbot.chatbot.chat"><code class="docutils literal notranslate"><span class="pre">SubmissionChatbot.chatbot.chat()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.chat.get_available_bots"><code class="docutils literal notranslate"><span class="pre">get_available_bots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.chat.get_bot_config"><code class="docutils literal notranslate"><span class="pre">get_bot_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.chat.get_bot_names"><code class="docutils literal notranslate"><span class="pre">get_bot_names()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.chat.get_bot_response"><code class="docutils literal notranslate"><span class="pre">get_bot_response()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse.competition">chaiverse.competition module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.competition.get_competitions"><code class="docutils literal notranslate"><span class="pre">get_competitions()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse.config">chaiverse.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse.constants">chaiverse.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse.feedback">chaiverse.feedback module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.feedback.Feedback"><code class="docutils literal notranslate"><span class="pre">Feedback</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.feedback.Feedback.df"><code class="docutils literal notranslate"><span class="pre">Feedback.df</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.feedback.Feedback.pprint_row"><code class="docutils literal notranslate"><span class="pre">Feedback.pprint_row()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.feedback.Feedback.sample"><code class="docutils literal notranslate"><span class="pre">Feedback.sample()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.feedback.get_feedback"><code class="docutils literal notranslate"><span class="pre">get_feedback()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.feedback.is_submission_updated"><code class="docutils literal notranslate"><span class="pre">is_submission_updated()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse.formatters">chaiverse.formatters module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.formatters.ChatMLFormatter"><code class="docutils literal notranslate"><span class="pre">ChatMLFormatter</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.ChatMLFormatter.bot_template"><code class="docutils literal notranslate"><span class="pre">ChatMLFormatter.bot_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.ChatMLFormatter.memory_template"><code class="docutils literal notranslate"><span class="pre">ChatMLFormatter.memory_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.ChatMLFormatter.prompt_template"><code class="docutils literal notranslate"><span class="pre">ChatMLFormatter.prompt_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.ChatMLFormatter.response_template"><code class="docutils literal notranslate"><span class="pre">ChatMLFormatter.response_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.ChatMLFormatter.user_template"><code class="docutils literal notranslate"><span class="pre">ChatMLFormatter.user_template</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.formatters.PromptFormatter"><code class="docutils literal notranslate"><span class="pre">PromptFormatter</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PromptFormatter.bot_template"><code class="docutils literal notranslate"><span class="pre">PromptFormatter.bot_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PromptFormatter.memory_template"><code class="docutils literal notranslate"><span class="pre">PromptFormatter.memory_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PromptFormatter.prompt_template"><code class="docutils literal notranslate"><span class="pre">PromptFormatter.prompt_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PromptFormatter.response_template"><code class="docutils literal notranslate"><span class="pre">PromptFormatter.response_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PromptFormatter.user_template"><code class="docutils literal notranslate"><span class="pre">PromptFormatter.user_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PromptFormatter.validate_bot"><code class="docutils literal notranslate"><span class="pre">PromptFormatter.validate_bot()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PromptFormatter.validate_formatter"><code class="docutils literal notranslate"><span class="pre">PromptFormatter.validate_formatter()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PromptFormatter.validate_memory"><code class="docutils literal notranslate"><span class="pre">PromptFormatter.validate_memory()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PromptFormatter.validate_user"><code class="docutils literal notranslate"><span class="pre">PromptFormatter.validate_user()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.formatters.PygmalionFormatter"><code class="docutils literal notranslate"><span class="pre">PygmalionFormatter</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PygmalionFormatter.bot_template"><code class="docutils literal notranslate"><span class="pre">PygmalionFormatter.bot_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PygmalionFormatter.memory_template"><code class="docutils literal notranslate"><span class="pre">PygmalionFormatter.memory_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PygmalionFormatter.prompt_template"><code class="docutils literal notranslate"><span class="pre">PygmalionFormatter.prompt_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PygmalionFormatter.response_template"><code class="docutils literal notranslate"><span class="pre">PygmalionFormatter.response_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.PygmalionFormatter.user_template"><code class="docutils literal notranslate"><span class="pre">PygmalionFormatter.user_template</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.formatters.VicunaFormatter"><code class="docutils literal notranslate"><span class="pre">VicunaFormatter</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.VicunaFormatter.bot_template"><code class="docutils literal notranslate"><span class="pre">VicunaFormatter.bot_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.VicunaFormatter.memory_template"><code class="docutils literal notranslate"><span class="pre">VicunaFormatter.memory_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.VicunaFormatter.prompt_template"><code class="docutils literal notranslate"><span class="pre">VicunaFormatter.prompt_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.VicunaFormatter.response_template"><code class="docutils literal notranslate"><span class="pre">VicunaFormatter.response_template</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.formatters.VicunaFormatter.user_template"><code class="docutils literal notranslate"><span class="pre">VicunaFormatter.user_template</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse.http_client">chaiverse.http_client module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.http_client.FeedbackClient"><code class="docutils literal notranslate"><span class="pre">FeedbackClient()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.http_client.SubmitterClient"><code class="docutils literal notranslate"><span class="pre">SubmitterClient()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse.login_cli">chaiverse.login_cli module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.login_cli.auto_authenticate"><code class="docutils literal notranslate"><span class="pre">auto_authenticate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.login_cli.developer_login"><code class="docutils literal notranslate"><span class="pre">developer_login()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse.setup">chaiverse.setup module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse.submit">chaiverse.submit module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.submit.ModelSubmitter"><code class="docutils literal notranslate"><span class="pre">ModelSubmitter</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.submit.ModelSubmitter.developer_key"><code class="docutils literal notranslate"><span class="pre">ModelSubmitter.developer_key</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.submit.ModelSubmitter.verbose"><code class="docutils literal notranslate"><span class="pre">ModelSubmitter.verbose</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaiverse.submit.ModelSubmitter.submit"><code class="docutils literal notranslate"><span class="pre">ModelSubmitter.submit()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">ModelSubmitter.submit()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.submit.ModelSubmitter.submitter.submit"><code class="docutils literal notranslate"><span class="pre">ModelSubmitter.submitter.submit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.submit.check_user_accepts_eula"><code class="docutils literal notranslate"><span class="pre">check_user_accepts_eula()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.submit.deactivate_model"><code class="docutils literal notranslate"><span class="pre">deactivate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.submit.evaluate_model"><code class="docutils literal notranslate"><span class="pre">evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.submit.get_model_info"><code class="docutils literal notranslate"><span class="pre">get_model_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.submit.get_my_submissions"><code class="docutils literal notranslate"><span class="pre">get_my_submissions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.submit.redeploy_model"><code class="docutils literal notranslate"><span class="pre">redeploy_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.submit.submit_model"><code class="docutils literal notranslate"><span class="pre">submit_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.submit.teardown_model"><code class="docutils literal notranslate"><span class="pre">teardown_model()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse.utils">chaiverse.utils module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.utils.cache"><code class="docutils literal notranslate"><span class="pre">cache()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.utils.distribute_to_workers"><code class="docutils literal notranslate"><span class="pre">distribute_to_workers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.utils.get_all_historical_submissions"><code class="docutils literal notranslate"><span class="pre">get_all_historical_submissions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.utils.get_guanaco_data_dir_env"><code class="docutils literal notranslate"><span class="pre">get_guanaco_data_dir_env()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.utils.get_hexdigest"><code class="docutils literal notranslate"><span class="pre">get_hexdigest()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.utils.get_localised_timestamp"><code class="docutils literal notranslate"><span class="pre">get_localised_timestamp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.utils.get_submissions"><code class="docutils literal notranslate"><span class="pre">get_submissions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.utils.get_url"><code class="docutils literal notranslate"><span class="pre">get_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.utils.guanaco_data_dir"><code class="docutils literal notranslate"><span class="pre">guanaco_data_dir()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.utils.parse_log_entry"><code class="docutils literal notranslate"><span class="pre">parse_log_entry()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chaiverse.utils.print_color"><code class="docutils literal notranslate"><span class="pre">print_color()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-chaiverse">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">chaiverse</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">chaiverse</a></li>
+      <li>Next: <a href="chaiverse.lib.html" title="next chapter">chaiverse.lib package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, chai.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/chaiverse.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
